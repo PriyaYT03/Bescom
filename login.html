@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>OTP Form</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-
+	<title>Employee Login</title>
+	<link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
-	<form id="otpForm">
-		<label for="name">Name:</label>
-		<input type="text" id="name" name="name" required><br><br>
-		
-		<label for="phone">Phone Number:</label>
-		<input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"><br><br>
-		
-		<label for="otp">OTP:</label>
-		<input type="number" id="otp" name="otp" required length="6"><br><br>
-		
-		<button type="submit">Submit</button>
-		<button type="button" id="sendOtp">Send OTP</button>
-	</form>
+	<div class="login-container">
+		<form id="login-form">
+			<h2>Employee Login</h2>
+			<div class="form-group">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required title="enter your name">
+			</div>
+			<div class="form-group">
+				<label for="employee-id">Employee ID:</label>
+				<input type="text" id="employee-id" name="employee-id" required title="enter id">
+			</div>
+			<div class="form-group">
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" required title="enter password">
+			</div>
+			<button type="submit" title="submit">Login</button>
+		</form>
+		<div class="forgot-password">
+			<a href="#" id="forgot-password-link">Forgot Password?</a>
+		</div>
+		<div class="forgot-password-form" style="display: none;">
+			<h2>Reset Password</h2>
+			<form id="forgot-password-form">
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+				<button type="submit">Send Reset Link</button>
+			</form>
+		</div>
+	</div>
 
 	<script src="script.js"></script>
 </body>
