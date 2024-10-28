@@ -1,38 +1,22 @@
-const loginForm = document.getElementById('login-form');
-const forgotPasswordLink = document.getElementById('forgot-password-link');
-const forgotPasswordForm = document.getElementById('forgot-password-form');
+  const form = document.querySelector('.login-form');
+  const usernameInput = document.querySelector('#username');
+  const passwordInput = document.querySelector('#password');
 
-forgotPasswordLink.addEventListener('click', (e) => {
-	e.preventDefault();
-	loginForm.style.display = 'none';
-	forgotPasswordForm.style.display = 'block';
-});
+  form.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent default form submission behavior
 
-forgotPasswordForm.addEventListener('submit', (e) => {
-	e.preventDefault();
-	const email = document.getElementById('email').value;
-	// Call API to send reset link
-	fetch('/send-reset-link', {
-		method: 'POST',
-		headers: { 'Content-Type': 'application/json' },
-		body: JSON.stringify({ email }),
-	})
-		.then((res) => res.json())
-		.then((data) => console.log(data))
-		.catch((err) => console.error(err));
-});
+      // Basic validation (you can add more robust validation as needed)
+      if (!usernameInput.value || !passwordInput.value) {
+          alert('Please fill in all fields.');
+          return;
+      }
 
-loginForm.addEventListener('submit', (e) => {
-	e.preventDefault();
-	const name = document.getElementById('name').value;
-	const employeeId = document.getElementById('employee-id').value;
-	const password = document.getElementById('password').value;
-	// Call API to authenticate
-	fetch('/authenticate', {
-		method: 'POST',
-		headers: { 'Content-Type': 'application/json' },
-		body: JSON.stringify({ name, employeeId, password }),
-	})
-		.then((res) => res.json())
-		.then((data) => console.log(data))
-})
+      // Simulate form submission (replace with your actual backend logic)
+      console.log('Form submitted:', {
+          username: usernameInput.value,
+          password: passwordInput.value
+      });
+
+      // Reset form fields after submission
+      form.reset();
+  });
