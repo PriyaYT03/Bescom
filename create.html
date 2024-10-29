@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create File</title>
+    <link rel="stylesheet" href="create.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Create a New File</h2>
+        <form id="fileForm">
+            <label for="fileNumber">File Number:</label>
+            <input type="text" id="fileNumber" name="fileNumber" required>
+
+            <label for="fileTitle">File Title:</label>
+            <input type="text" id="fileTitle" name="fileTitle" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4"></textarea>
+
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department">
+
+            <button type="submit">Save</button>
+            <p id="message"></p>
+        </form>
+    </div>
+
+    <script src="create.js"></script>
+</body>
+</html>
