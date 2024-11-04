@@ -24,7 +24,7 @@
         </nav>
     </aside>
 
-    <!-- Main Content Area -->
+    
     <main class="main-content">
         <!-- Header -->
         <header>
@@ -34,13 +34,13 @@
     		<div class="profile-container">
         	<img src="profile.jpg" alt="Profile" class="profile-icon" onclick="openModal()">
 	
-		<!-- Modal for Editing Profile -->
+		
     <div id="profileModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h2>Edit Profile</h2>
             
-            <!-- Form for Profile Details -->
+            
             <form id="profileForm">
                 <div class="form-group">
                     <label for="username">Username</label>
@@ -55,7 +55,7 @@
                     <input type="text" id="phone" placeholder="Enter your phone number" required>
                 </div>
                 
-                <!-- Upload New Profile Picture -->
+        
                 <div class="form-group">
                     <label for="profilePicture">Change Profile Picture</label>
                     <input type="file" id="profilePicture" accept="image/*" onchange="previewImage(event)">
@@ -71,7 +71,6 @@
             </div>
         </header>
 
-        <!-- Summary Cards -->
         <section class="summary-cards">
             <div class="card">
                 <h3>Files in Progress</h3>
@@ -91,7 +90,7 @@
             </div>
         </section>
 
-        <!-- File Activity Log Table -->
+
         <section class="activity-log">
             <h2>Recent File Activity</h2>
             <table>
@@ -105,7 +104,7 @@
                     </tr>
                 </thead>
                 <tbody id="activityTable">
-                    <!-- JavaScript will dynamically add rows here -->
+                    
                 </tbody>
             </table>
         </section>
