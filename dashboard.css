@@ -1,11 +1,10 @@
-/* Basic Reset */
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Sidebar */
+
 .sidebar {
     width: 250px;
     height: 100vh;
@@ -31,7 +30,7 @@
     background-color: #1F2A3B;
 }
 
-/* Main Content */
+
 .main-content {
     margin-left: 250px;
     padding: 20px;
@@ -65,7 +64,7 @@ header .title {
     border-radius: 50%;
 }
 
-/* Summary Cards */
+
 .summary-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -90,7 +89,7 @@ header .title {
     transform: translateY(-5px);
 }
 
-/* Activity Log */
+
 .activity-log {
     margin-top: 20px;
 }
