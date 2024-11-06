@@ -10,7 +10,10 @@
 
 <body>
     <div class="container">
-        <form action="dashboard.html" class="login-form">
+        <form action="login.php" method="POST" class="login-form">
+            <?php if ($error_message): ?>
+        <p style="color: red;"><?php echo $error_message; ?></p>
+    <?php endif; ?>
             <h2>Login</h2>
             <input type="text" placeholder="Username" required>
             <input type="password" placeholder="Password" required>
@@ -23,7 +26,6 @@
         </form>
         <p id="error-message" style="color: red;"></p>
     </div>
-    <script src="script.js"></script>
 </body>
 
 </html>
