@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search File</title>
+    <link rel="stylesheet" href="u.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <h2>File Tracking System</h2>
+        <nav>
+            <a href="t.html">Home</a>
+            <a href="v.html">Create File</a>
+            <a href="u.html">Browse Files</a>
+            <a href="r.html">Departmental Workflow</a>
+            <a href="s.html">Reports</a>
+            <a href="#logout">Logout</a>
+        </nav>
+    </aside>
+    <div class="container">
+        <h2>Search File by ID</h2>
+        <input type="text" id="fileIdInput" placeholder="Enter File ID">
+        <button onclick="searchFile()">Search</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script src="u.js"></script>
+</body>
+</html>

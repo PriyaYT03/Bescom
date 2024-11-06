@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Departmental Workflow Tracking</title>
+    <link rel="stylesheet" href="r.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <h2>File Tracking System</h2>
+        <nav>
+            <a href="t.html">Home</a>
+            <a href="v.html">Create File</a>
+            <a href="u.html">Browse Files</a>
+            <a href="r.html">Departmental Workflow</a>
+            <a href="s.html">Reports</a>
+            <a href="#logout">Logout</a>
+        </nav>
+    </aside>
+    <div class="container">
+        <h1>File Tracking System</h1>
+        <label for="fileNumber">File Number:</label>
+        <input type="text" id="fileNumber" placeholder="Enter File Number">
+        <button onclick="trackFile()">Track File</button>
+
+        <div id="trackingInfo" class="tracking-info"></div>
+    </div>
+    <script src="r.js"></script>
+</body>
+</html>
